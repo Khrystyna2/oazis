@@ -1,0 +1,35 @@
+.accordion {
+	width: 100%;
+	@include radius(5px);
+	overflow: hidden;
+	font-family: $second-font-family;
+	font-size: $base-fs;
+	color: #232323;
+	background-color: #f9fbff;
+	font-weight: 400;
+	&__item {
+		border-bottom: 1px solid #dbdcde;
+		&:last-of-type {
+			border-bottom: none;
+		}
+	}
+	&__header {
+		display: flex;
+		align-items: center;
+		padding-left: 34px;
+		span {
+			cursor: pointer;
+			display: block;
+			width: 100px;
+			height: 100px;
+			background: #f2f5fb url(../../images/icons/arrow-down-black.svg) no-repeat center center;
+			&.rotate {
+				@include transform(rotate(180deg));
+			}
+		}
+	}
+	&__body {
+		display: none;
+		padding: 20px 34px;
+	}
+}

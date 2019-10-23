@@ -1,0 +1,109 @@
+.form-services {
+	width: 100%;
+	margin-top: 88px;
+	font-size: $base-fs;
+	@include radius(15px);
+	overflow: hidden;
+	&__header {
+		min-height: 108px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: 700;
+		background-color: $bg-light-gray;
+		padding: 0 !important;
+		p {
+			position: relative;
+			&::after {
+				content: "";
+				position: absolute;
+				right: -48px;
+				top: 50%;
+				margin-top: -4px;
+				width: 32px;
+				height: 10px;
+				background: url(../../images/icons/arrow-pointer-right.png) no-repeat center center/contain;
+			}
+		}
+	}
+	&__body {
+		background-color: $base-bg;
+		display: flex;
+	}
+	&__col {
+		width: 20%;
+		li {
+			height: 52px;
+			padding: 0 20px;
+			display: flex;
+			align-items: center;
+			border-bottom: 1px solid #c2c2c2;
+			border-right: 1px solid #c2c2c2;
+			&:first-of-type {
+				border-right: none;
+			}
+			&:last-of-type {
+				border-bottom: none;
+			}
+			&.checked {
+				background: $bg-green;
+				color: $text-color-white;
+				font-weight: 700;
+				.icon {
+					&_uber {
+						background-image: url(../../images/icons/uber-white.png);
+					}
+					&_uklon {
+						background-image: url(../../images/icons/uklon-white.png);
+					}
+					&_bolt {
+						background-image: url(../../images/icons/bolt-white.png);
+					}
+				}
+			}
+			.icon {
+				display: block;
+				width: 100px;
+				height: 30px;
+				background-position: center left;
+				background-size: contain;
+				background-repeat: no-repeat;
+				&_uber {
+					background-image: url(../../images/icons/uber.png);
+				}
+				&_uklon {
+					background-image: url(../../images/icons/uklon.png);
+				}
+				&_bolt {
+					background-image: url(../../images/icons/bolt.png);
+				}
+			}
+		}
+		img {
+			height: 30px;
+			width: auto;
+		}
+		&:last-of-type {
+			li {
+				border-right: none;
+			}
+			.form-services__header {
+				p {
+					&::after {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+	.icon-info {
+		display: flex;
+		width: 18px;
+		margin-left: 20px;
+	}
+	&__footer {
+		padding: 38px 38px 28px 30px;
+		background-color: #363636;
+		@include radius(0 0 15px 15px);
+	}
+}
