@@ -56,13 +56,59 @@
 }
 
 @media only screen and (max-width: 1199.8px) {
-}
+	.header {
+		&::after {
+			bottom: 55px;
+		}
+	}
 
-@media only screen and (max-width: 991.8px) {
+	.logo {
+		font-size: 20px;
+		&__img {
+			width: 69px;
+			height: 69px;
+			> img {
+				width: 44px;
+			}
+		}
+		p {
+			margin-left: 18px;
+			> small {
+				font-size: 10px;
+			}
+		}
+	}
+
+	.menu {
+		height: 56px;
+		font-size: 12px;
+	}
 }
 
 @media only screen and (max-width: 767.8px) {
-}
+	.header {
+		&::after {
+			display: none;
+		}
+		.container {
+			padding: 0;
+		}
+	}
 
-@media only screen and (max-width: 575.8px) {
+	.logo {
+		font-size: 16px;
+		&__img {
+			width: 70px;
+			height: 68px;
+			> img {
+				width: 32px;
+			}
+		}
+		p {
+			margin-left: 8px;
+			> small {
+				font-size: 8px;
+			}
+		}
+	}
 }

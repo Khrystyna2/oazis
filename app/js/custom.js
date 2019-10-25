@@ -6,6 +6,13 @@ $(document).ready(function() {
 			.fadeToggle(400);
 	});
 
+	// open language
+	$(".language>li>a").click(function() {
+		$(this)
+			.next("ul")
+			.slideToggle();
+	});
+
 	const chooseOptions = ["car", "conditions", "service", "salary", "schedule"];
 
 	chooseOptions.forEach(function(name) {
@@ -89,7 +96,24 @@ $(document).ready(function() {
 		infinite: false,
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		centerMode: true
+		centerMode: true,
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 2,
+					centerMode: false
+				}
+			},
+			{
+				breakpoint: 576,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			}
+		]
 	});
 
 	// accordion
@@ -145,4 +169,5 @@ $(document).ready(function() {
 		e.stopPropagation();
 	});
 
+	$(".tel").mask("(999) 999-9999");
 });
