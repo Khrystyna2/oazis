@@ -119,7 +119,9 @@ $(document).ready(function() {
 	$(".tab-navigation__item").click(function() {
 		let dataTab = $(this).data("tab");
 		let getBlock = $(this).closest(".tabs-block");
-		let tabContent = $(".tab-content>div.tab-content__item[data-tab=" + dataTab + "]");
+		let tabContent = $(
+			".tab-content>div.tab-content__item[data-tab=" + dataTab + "]"
+		);
 		getBlock
 			.find(tabContent)
 			.addClass("open")
@@ -226,7 +228,7 @@ $(document).ready(function() {
 	new WOW().init();
 
 	// animate car on scroll
-	const tween = new TimelineLite();
+	/*const tween = new TimelineLite();
 
 	tween
 		.add(
@@ -245,7 +247,7 @@ $(document).ready(function() {
 		duration: 2400
 	})
 		.setTween(tween)
-		.addTo(controller);
+		.addTo(controller);*/
 
 	$(".open-info").click(function() {
 		$(this)
@@ -260,12 +262,12 @@ $(document).ready(function() {
 	});
 
 	// animation dots on map first screen
-	[1, 2, 3, 4, 5].forEach(i => {
+	/*[1, 2, 3, 4, 5].forEach(i => {
 		const motionPath = MorphSVGPlugin.pathDataToBezier(`#path${i}`, { align: `#dots${i}` });
 		const tl = new TimelineMax({ repeat: -1 });
 		TweenLite.set(`#dots${i}`, { xPercent: -50, yPercent: -50 });
 		tl.to(`#dots${i}`, 160, { bezier: { values: motionPath, type: "cubic", ease: Linear.easeNone, repeatDelay: 0 } });
-	});
+	});*/
 
 	$(".car__gallery-link").click(function() {
 		$("body").addClass("overflow-hidden");
@@ -275,23 +277,23 @@ $(document).ready(function() {
 	});
 });
 
-if ($("*").is(".cookie")) {
-	$(document).ready(function() {
-		$(".cookie")
-			.fadeIn(400)
-			.addClass("show");
-		$("body").addClass("overflow-hidden");
-		// close cookie
-		$(".cookie__close, .cookie__content").click(function(e) {
-			e.preventDefault();
-			$(".cookie")
-				.fadeOut(400)
-				.removeClass("show");
-			$("body").removeClass("overflow-hidden");
-		});
+// if ($("*").is(".cookie")) {
+// 	$(document).ready(function() {
+// 		$(".cookie")
+// 			.fadeIn(400)
+// 			.addClass("show");
+// 		$("body").addClass("overflow-hidden");
+// 		// close cookie
+// 		$(".cookie__close, .cookie__content").click(function(e) {
+// 			e.preventDefault();
+// 			$(".cookie")
+// 				.fadeOut(400)
+// 				.removeClass("show");
+// 			$("body").removeClass("overflow-hidden");
+// 		});
 
-		$(".cookie__body").click(function(e) {
-			e.stopPropagation();
-		});
-	});
-}
+// 		$(".cookie__body").click(function(e) {
+// 			e.stopPropagation();
+// 		});
+// 	});
+// }

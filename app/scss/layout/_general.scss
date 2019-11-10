@@ -227,11 +227,13 @@ section {
 }
 
 .slick-next {
-	background: $bg-dark url(../images/icons/arrow-next.png) no-repeat center center/30px;
+	background: $bg-dark url(../images/icons/arrow-next.png) no-repeat center
+		center/30px;
 }
 
 .slick-prev {
-	background: $bg-dark url(../images/icons/arrow-prev.png) no-repeat center center/30px;
+	background: $bg-dark url(../images/icons/arrow-prev.png) no-repeat center
+		center/30px;
 }
 
 .slick-dots {
@@ -560,11 +562,6 @@ section {
 			font-size: 16px;
 			width: 49.6%;
 			flex: none;
-			&.active {
-				order: 2;
-				width: 100%;
-				margin-top: 2px;
-			}
 		}
 	}
 

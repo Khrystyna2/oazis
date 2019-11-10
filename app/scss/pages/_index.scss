@@ -2202,16 +2202,6 @@
 				}
 			}
 		}
-		&:last-of-type {
-			.schedule__table-body {
-				.schedule__table-row {
-					display: none;
-					&:last-of-type {
-						display: flex;
-					}
-				}
-			}
-		}
 	}
 
 	.social-package {
