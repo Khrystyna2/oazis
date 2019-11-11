@@ -272,7 +272,7 @@ $(document).ready(function() {
 	$(".car__gallery-link").click(function() {
 		$("body").addClass("overflow-hidden");
 	});
-	$(".lb-close, .lightboxOverlay").click(function() {
+	$(".lb-close, .lightboxOverlay, .lightbox").click(function() {
 		$("body").removeClass("overflow-hidden");
 	});
 });
