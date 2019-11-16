@@ -102,28 +102,65 @@
 
 @media only screen and (max-width: 767.8px) {
 	.header {
-		overflow: hidden;
 		&::after {
 			display: none;
 		}
-		.container {
-			padding: 0;
+		&__language {
+			position: relative;
+			margin-left: -10px;
+			width: 44px;
+			font-size: 11px;
+			z-index: 2;
+		}
+		&__phone {
+			height: 48px;
+			width: 160px;
+			.phone {
+				width: 160px;
+				font-size: 16px;
+				margin: 0;
+				> span {
+					padding: 4px 8px 0;
+				}
+				&__you-call {
+					font-size: 11px;
+					margin-right: 8px;
+				}
+			}
+		}
+
+		.social-link {
+			max-width: 150px;
+			border-left: 1px solid #e8e8e8;
+			height: 48px;
+			justify-content: space-around;
+			li {
+				margin: 0;
+				> a {
+					width: 16px;
+				}
+			}
+		}
+
+		.bg-gray {
+			background-color: #f8f8f8;
 		}
 	}
 
 	.logo {
-		font-size: 16px;
+		font-size: 19px;
+		margin-left: -15px;
 		&__img {
 			width: 70px;
-			height: 68px;
+			height: 55px;
 			> img {
 				width: 32px;
 			}
 		}
 		p {
-			margin-left: 8px;
+			margin-left: 16px;
 			> small {
-				font-size: 8px;
+				font-size: 10px;
 			}
 		}
 	}

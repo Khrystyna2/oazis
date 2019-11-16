@@ -24,13 +24,28 @@
   <header class="header">
     <div class="container">
       <div class="row align-items-center justify-content-between">
-        <div class="col-6 col-md-5">
+        <div class="col-9 col-md-5">
           <a href="#" class="logo d-flex align-items-center">
             <span class="logo__img"><img src="images/logo.svg" alt="logo"></span>
             <p>Oazis-park <small>Автопарк №1 в Украине</small></p>
           </a>
         </div>
-        <div class="col-md-2 d-none d-md-block">
+        <div class="col-3 d-block d-md-none">
+          <ul class="language header__language">
+            <li>
+              <a href="javascript:void(0)">Ua <img src="images/icons/arrow-down.svg" alt="down-arrow" /></a>
+              <ul class="language__sub">
+                <li>
+                  <a href="#">En</a>
+                </li>
+                <li>
+                  <a href="#">Ru</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="col-5 col-md-2 order-2 bg-gray">
           <ul class="social-link d-flex align-items-center">
             <li>
               <a href="#">
@@ -63,22 +78,24 @@
             </li>
           </ul>
         </div>
-        <div class="col-6 col-md-4 text-right">
-          <div class="phone">
-            <span class="phone__number open-phone-list">
-              <a href="tel: +380734174813">+38 073 417 48 13</a>
-              <span class="arrow-down">
-                <img src="images/icons/arrow-down.svg" alt="arrow down">
+        <div class="col-7 col-md-4 text-right order-1 order-md-2 bg-gray">
+          <div class="header__phone">
+            <div class="phone">
+              <span class="phone__number open-phone-list">
+                <a href="tel: +380734174813">+38 073 417 48 13</a>
+                <span class="arrow-down">
+                  <img src="images/icons/arrow-down.svg" alt="arrow down">
+                </span>
               </span>
-            </span>
-            <ul class="phone__list">
-              <li><span class="phone__number"> <a href="tel: +380734174813">+38 073 417 48 13</a></span>
-              </li>
-              <li><span class="phone__number"> <a href="tel: +380734174813">+38 073 417 48 13</a></span>
-              </li>
-            </ul>
+              <ul class="phone__list">
+                <li><span class="phone__number"> <a href="tel: +380734174813">+38 073 417 48 13</a></span>
+                </li>
+                <li><span class="phone__number"> <a href="tel: +380734174813">+38 073 417 48 13</a></span>
+                </li>
+              </ul>
+            </div>
+            <a href="#" class="phone__you-call open-pop-up" data-target="#callBack">Вам перезвонить?</a>
           </div>
-          <a href="#" class="phone__you-call open-pop-up" data-target="#callBack">Вам перезвонить?</a>
         </div>
       </div>
     </div>
@@ -2079,6 +2096,19 @@
           <div class="col-12 col-md-5 col-lg-5 offset-lg-1">
             <div class="first-screen__box">
               <p>Зарабатывайте от 20 000<br /> до 35 000 грн. в месяц.</p>
+              <div class="thumb-wrap video-block">
+                <iframe id="video_player" src="" frameborder="0" allowfullscreen="1"
+                  allow="autoplay; encrypted-media"></iframe>
+                <div class="video-block__cover">
+                  <img src="images/video-image.jpg" alt="">
+                  <div class="video-block__text">
+                    <button type="button" class="btn-play-video" data-src="https://www.youtube.com/embed/buQxF0eIeXI">
+                      <img src="images/icon-play.png" alt="">
+                    </button>
+                    <span>Смотрите видео о нашем парке</span>
+                  </div>
+                </div>
+              </div>
               <a href="#firstScreenBottom" class="scroll-section"><img src="images/icons/info-white.svg" alt="info">
                 Подробнее об условиях</a>
             </div>

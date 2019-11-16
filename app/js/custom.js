@@ -9,19 +9,21 @@ $(window).on("load", function() {
 
 $(document).ready(function() {
 	// fixed menu
-	let heightHeader = $(".header").height();
-	let heightMenu = $(".header__nav").height();
+	if ($(window).width() >= 768) {
+		let heightHeader = $(".header").height();
+		let heightMenu = $(".header__nav").height();
 
-	$(window).scroll(function() {
-		let currentPosition = $(window).scrollTop();
-		if (currentPosition >= heightHeader - heightMenu) {
-			$(".header__nav").addClass("fixed");
-			$(".header").css("padding-bottom", heightMenu);
-		} else {
-			$(".header__nav").removeClass("fixed");
-			$(".header").css("padding-bottom", "0");
-		}
-	});
+		$(window).scroll(function() {
+			let currentPosition = $(window).scrollTop();
+			if (currentPosition >= heightHeader - heightMenu) {
+				$(".header__nav").addClass("fixed");
+				$(".header").css("padding-bottom", heightMenu);
+			} else {
+				$(".header__nav").removeClass("fixed");
+				$(".header").css("padding-bottom", "0");
+			}
+		});
+	}
 
 	// $(".open-phone-list").click(function() {
 	// 	$(this).toggleClass("open");
@@ -119,9 +121,7 @@ $(document).ready(function() {
 	$(".tab-navigation__item").click(function() {
 		let dataTab = $(this).data("tab");
 		let getBlock = $(this).closest(".tabs-block");
-		let tabContent = $(
-			".tab-content>div.tab-content__item[data-tab=" + dataTab + "]"
-		);
+		let tabContent = $(".tab-content>div.tab-content__item[data-tab=" + dataTab + "]");
 		getBlock
 			.find(tabContent)
 			.addClass("open")
@@ -274,6 +274,26 @@ $(document).ready(function() {
 	});
 	$(".lb-close, .lightboxOverlay, .lightbox").click(function() {
 		$("body").removeClass("overflow-hidden");
+	});
+
+	// open video
+	$(".btn-play-video").click(function(e) {
+		e.preventDefault();
+		let videoStc = $(this).data("src");
+		$("#video_player").attr(
+			"src",
+			videoStc + "?autoplay=1&amp;loop=1&amp;controls=0&amp;showinfo=0&amp;"
+		);
+		$(".video-block__cover").addClass("hide");
+	});
+
+	$(document.body).click(function(e) {
+		$("#video_player").attr("src", "");
+		$(".video-block__cover").removeClass("hide");
+	});
+
+	$(".video-block").click(function(e) {
+		e.stopPropagation();
 	});
 });
 
